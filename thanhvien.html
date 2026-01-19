@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thành viên – Lớp 12C2</title>
+
+    <style>
+        body { font-family: "Segoe UI", Arial; background: #111; margin: 0; color: #eee; }
+
+        header {
+            background: #000; padding: 25px 0; text-align: center; color: white;
+            box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+        }
+
+        nav a {
+            text-decoration: none; color: #fff; margin: 0 15px;
+            padding: 8px 16px; border-radius: 8px; transition: .25s;
+        }
+        nav a:hover { background: white; color: black; }
+
+        .box {
+            width: 90%; max-width: 1100px; margin: 25px auto;
+            background: #1a1a1a; padding: 30px; border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(255,255,255,0.1);
+        }
+
+        h2 { color: #fff; }
+
+        .list {
+            display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
+        }
+
+        .student {
+            width: 160px; background: #222; padding: 15px; border-radius: 12px;
+            text-align: center; box-shadow: 0 4px 12px rgba(255,255,255,0.08);
+        }
+
+        .student img {
+            width: 90px; height: 90px; border-radius: 50%; margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DANH SÁCH THÀNH VIÊN – LỚP 12C2</h1>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="thanhvien.html">Thành viên</a>
+        <a href="hoatdong.html">Hoạt động</a>
+        <a href="thanhtich.html">Thành tích</a>
+    </nav>
+</header>
+
+<div class="box">
+    <h2>Ban cán sự lớp</h2>
+    <p><b>Lớp trưởng:</b> Lương Thiên Phúc</p>
+    <p><b>Bí thư lớp:</b> Lê Thị Nhã Thư</p>
+</div>
+
+<div class="box">
+    <h2>Danh sách học sinh</h2>
+
+    <div class="list">
+
+        <!-- 44 học sinh -->
+        <script>
+            const students = [
+                "Mai Phượng Thúy An",
+                "Đặng Châu Anh",
+                "Ngô Xuân Bảo",
+                "Trần Gia Bảo",
+                "Trần Ngọc Linh Chi",
+                "Nguyễn Bích Diễm",
+                "Đoàn Trí Dũng - Lớp phó học tập",
+                "Trần Anh Dũng - Lớp phó thể dục",
+                "Lưu Quang Duy",
+                "Võ Hoàng Duy",
+                "Võ Văn Duy",
+                "Ngô Lê Kiều Duyên - Tổ trưởng tổ 2",
+                "Bế Tiến Đạt",
+                "Nông Tiến Đạt",
+                "Đoàn Hà Bảo Đức",
+                "Đinh Thiên Hoan",
+                "Cù Huy Hoàng",
+                "Nguyễn Tiến Khang",
+                "Nguyễn Lê Đăng Khôi - Tổ trưởng tổ 3",
+                "Phạm Đăng Khương",
+                "Kiều Khởi Kiệt",
+                "Nguyễn Đặng Gia Kiệt",
+                "Dương Nữ Thiên Kim",
+                "Khổng Sỹ Mạnh",
+                "Trần Thế Mạnh",
+                "Huỳnh Hoàng Châu My",
+                "Phạm Anh Ý Nhật - Tổ trưởng tổ 1",
+                "Ngô Nguyễn Uyển Nhi",
+                "Nguyễn Phương Nhi",
+                "Đinh Khánh Như",
+                "Nguyễn Lê Gia Như",
+                "Lương Thiên Phúc - Lớp trưởng",
+                "Nguyễn Minh Quân",
+                "Nguyễn Thị Tú Quyên",
+                "Lê Phạm Phát Thăng",
+                "Lê Thị Nhã Thư - Tổ trưởng tổ 4 & Bí thư lớp",
+                "Nguyễn Mạnh Tiến",
+                "Nguyễn Lê Bảo Trân",
+                "Trần Đặng Huyền Trân",
+                "Hoàng Lê Băng Trúc - Thư kí",
+                "Lưu Thị Thảo Vân - Lớp phó văn nghệ",
+                "Võ Nguyễn Tường Vi",
+                "Nguyễn Đoàn Trung Vũ",
+                "Tống Thị Yên"
+            ];
+
+            document.write(
+                students.map(name => `
+                    <div class="student">
+
+                        <p><b>${name}</b></p>
+                    </div>
+                `).join("")
+            );
+        </script>
+
+    </div>
+</div>
+
+</body>
+</html>
