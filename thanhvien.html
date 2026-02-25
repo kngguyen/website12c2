@@ -1,147 +1,178 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Thành viên – Lớp 12C2</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Thành viên – Lớp 12C2</title>
 
-    <style>
-        body { 
-            font-family: 'Poppins', Arial, sans-serif; 
-            margin: 0; 
-            background: #111;
-            color: #eee;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        h1, h2 {
-    font-weight: 600;
-    letter-spacing: 0.5px;
-        }
+<style>
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    background:#111;
+    color:#eee;
+}
 
-        p, li {
-    font-weight: 400;
-    line-height: 1.7;
-		}
+/* HEADER */
+header{
+    background:#000;
+    padding:25px 0;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(255,255,255,0.05);
+}
 
-        header {
-            background: #000; padding: 25px 0; text-align: center; color: white;
-            box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-        }
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 12px;
+    padding:8px 14px;
+    border-radius:6px;
+    transition:.3s;
+    font-weight:500;
+}
 
-        nav a {
-            text-decoration: none; color: #fff; margin: 0 15px;
-            padding: 8px 16px; border-radius: 8px; transition: .25s;
-        }
-        nav a:hover { background: white; color: black; }
+nav a:hover{
+    background:#fff;
+    color:#000;
+}
 
-        .box {
-            width: 90%; max-width: 1100px; margin: 25px auto;
-            background: #1a1a1a; padding: 30px; border-radius: 14px;
-            box-shadow: 0 4px 20px rgba(255,255,255,0.1);
-        }
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 4px 25px rgba(255,255,255,0.06);
+}
 
-        h2 { color: #fff; }
+h2{
+    margin-top:0;
+    font-weight:600;
+}
 
-        .list {
-            display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
-        }
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
 
-        .student {
-            width: 160px; background: #222; padding: 15px; border-radius: 12px;
-            text-align: center; box-shadow: 0 4px 12px rgba(255,255,255,0.08);
-        }
+thead{
+    background:#222;
+}
 
-        .student img {
-            width: 90px; height: 90px; border-radius: 50%; margin-bottom: 10px;
-        }
-    </style>
+thead th{
+    padding:14px;
+    text-align:left;
+    font-weight:600;
+    border-bottom:2px solid #333;
+}
+
+tbody tr{
+    border-bottom:1px solid #222;
+    transition:.2s;
+}
+
+tbody tr:hover{
+    background:#1f1f1f;
+}
+
+td{
+    padding:14px;
+    font-size:14px;
+}
+
+/* Badge chức vụ */
+.badge{
+    background:#fff;
+    color:#000;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:500;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>DANH SÁCH THÀNH VIÊN – LỚP 12C2</h1>
-    <nav>
-        <a href="index.html">Trang chủ</a>
-        <a href="thanhvien.html">Thành viên</a>
-        <a href="hoatdong.html">Hoạt động</a>
-        <a href="thanhtich.html">Thành tích</a>
-    </nav>
+<h1>DANH SÁCH THÀNH VIÊN – LỚP 12C2</h1>
+<nav>
+<a href="index.html">Trang chủ</a>
+<a href="thanhvien.html">Thành viên</a>
+<a href="hoatdong.html">Hoạt động</a>
+<a href="thanhtich.html">Thành tích</a>
+</nav>
 </header>
 
-<div class="box">
-    <h2>Ban cán sự lớp</h2>
-    <p><b>Lớp trưởng:</b> Lương Thiên Phúc</p>
-    <p><b>Bí thư lớp:</b> Lê Thị Nhã Thư</p>
-</div>
+<div class="container">
 
-<div class="box">
-    <h2>Danh sách học sinh</h2>
+<h2>Ban cán sự & Danh sách học sinh</h2>
 
-    <div class="list">
+<table>
+<thead>
+<tr>
+<th style="width:60px;">STT</th>
+<th>Họ và tên</th>
+<th style="width:250px;">Chức vụ</th>
+</tr>
+</thead>
 
-        <!-- 44 học sinh -->
-        <script>
-            const students = [
-                "Mai Phượng Thúy An",
-                "Đặng Châu Anh",
-                "Ngô Xuân Bảo",
-                "Trần Gia Bảo",
-                "Trần Ngọc Linh Chi",
-                "Nguyễn Bích Diễm",
-                "Đoàn Trí Dũng - Lớp phó học tập",
-                "Trần Anh Dũng - Lớp phó thể dục",
-                "Lưu Quang Duy",
-                "Võ Hoàng Duy",
-                "Võ Văn Duy",
-                "Ngô Lê Kiều Duyên - Tổ trưởng tổ 2",
-                "Bế Tiến Đạt",
-                "Nông Tiến Đạt",
-                "Đoàn Hà Bảo Đức",
-                "Đinh Thiên Hoan",
-                "Cù Huy Hoàng",
-                "Nguyễn Tiến Khang",
-                "Nguyễn Lê Đăng Khôi - Tổ trưởng tổ 3",
-                "Phạm Đăng Khương",
-                "Kiều Khởi Kiệt",
-                "Nguyễn Đặng Gia Kiệt",
-                "Dương Nữ Thiên Kim",
-                "Khổng Sỹ Mạnh",
-                "Trần Thế Mạnh",
-                "Huỳnh Hoàng Châu My",
-                "Phạm Anh Ý Nhật - Tổ trưởng tổ 1",
-                "Ngô Nguyễn Uyển Nhi",
-                "Nguyễn Phương Nhi",
-                "Đinh Khánh Như",
-                "Nguyễn Lê Gia Như",
-                "Lương Thiên Phúc - Lớp trưởng",
-                "Nguyễn Minh Quân",
-                "Nguyễn Thị Tú Quyên",
-                "Lê Phạm Phát Thăng",
-                "Lê Thị Nhã Thư - Tổ trưởng tổ 4 & Bí thư lớp",
-                "Nguyễn Mạnh Tiến",
-                "Nguyễn Lê Bảo Trân",
-                "Trần Đặng Huyền Trân",
-                "Hoàng Lê Băng Trúc - Thư kí",
-                "Lưu Thị Thảo Vân - Lớp phó văn nghệ",
-                "Võ Nguyễn Tường Vi",
-                "Nguyễn Đoàn Trung Vũ",
-                "Tống Thị Yên"
-            ];
+<tbody>
 
-            document.write(
-                students.map(name => `
-                    <div class="student">
+<tr><td>1</td><td>Mai Phượng Thúy An</td><td></td></tr>
+<tr><td>2</td><td>Đặng Châu Anh</td><td></td></tr>
+<tr><td>3</td><td>Ngô Xuân Bảo</td><td></td></tr>
+<tr><td>4</td><td>Trần Gia Bảo</td><td></td></tr>
+<tr><td>5</td><td>Trần Ngọc Linh Chi</td><td></td></tr>
+<tr><td>6</td><td>Nguyễn Bích Diễm</td><td></td></tr>
+<tr><td>7</td><td>Đoàn Trí Dũng</td><td><span class="badge">Lớp phó học tập</span></td></tr>
+<tr><td>8</td><td>Trần Anh Dũng</td><td><span class="badge">Lớp phó thể dục</span></td></tr>
+<tr><td>9</td><td>Lưu Quang Duy</td><td></td></tr>
+<tr><td>10</td><td>Võ Hoàng Duy</td><td></td></tr>
+<tr><td>11</td><td>Võ Văn Duy</td><td></td></tr>
+<tr><td>12</td><td>Ngô Lê Kiều Duyên</td><td><span class="badge">Tổ trưởng tổ 2</span></td></tr>
+<tr><td>13</td><td>Bế Tiến Đạt</td><td></td></tr>
+<tr><td>14</td><td>Nông Tiến Đạt</td><td></td></tr>
+<tr><td>15</td><td>Đoàn Hà Bảo Đức</td><td></td></tr>
+<tr><td>16</td><td>Đinh Thiên Hoan</td><td></td></tr>
+<tr><td>17</td><td>Cù Huy Hoàng</td><td></td></tr>
+<tr><td>18</td><td>Nguyễn Tiến Khang</td><td></td></tr>
+<tr><td>19</td><td>Nguyễn Lê Đăng Khôi</td><td><span class="badge">Tổ trưởng tổ 3</span></td></tr>
+<tr><td>20</td><td>Phạm Đăng Khương</td><td></td></tr>
+<tr><td>21</td><td>Kiều Khởi Kiệt</td><td></td></tr>
+<tr><td>22</td><td>Nguyễn Đặng Gia Kiệt</td><td></td></tr>
+<tr><td>23</td><td>Dương Nữ Thiên Kim</td><td></td></tr>
+<tr><td>24</td><td>Khổng Sỹ Mạnh</td><td></td></tr>
+<tr><td>25</td><td>Trần Thế Mạnh</td><td></td></tr>
+<tr><td>26</td><td>Huỳnh Hoàng Châu My</td><td></td></tr>
+<tr><td>27</td><td>Phạm Anh Ý Nhật</td><td><span class="badge">Tổ trưởng tổ 1</span></td></tr>
+<tr><td>28</td><td>Ngô Nguyễn Uyển Nhi</td><td></td></tr>
+<tr><td>29</td><td>Nguyễn Phương Nhi</td><td></td></tr>
+<tr><td>30</td><td>Đinh Khánh Như</td><td></td></tr>
+<tr><td>31</td><td>Nguyễn Lê Gia Như</td><td></td></tr>
+<tr><td>32</td><td>Lương Thiên Phúc</td><td><span class="badge">Lớp trưởng</span></td></tr>
+<tr><td>33</td><td>Nguyễn Minh Quân</td><td></td></tr>
+<tr><td>34</td><td>Nguyễn Thị Tú Quyên</td><td></td></tr>
+<tr><td>35</td><td>Lê Phạm Phát Thăng</td><td></td></tr>
+<tr><td>36</td><td>Lê Thị Nhã Thư</td><td><span class="badge">Tổ trưởng tổ 4 & Bí thư lớp</span></td></tr>
+<tr><td>37</td><td>Nguyễn Mạnh Tiến</td><td></td></tr>
+<tr><td>38</td><td>Nguyễn Lê Bảo Trân</td><td></td></tr>
+<tr><td>39</td><td>Trần Đặng Huyền Trân</td><td></td></tr>
+<tr><td>40</td><td>Hoàng Lê Băng Trúc</td><td><span class="badge">Thư kí</span></td></tr>
+<tr><td>41</td><td>Lưu Thị Thảo Vân</td><td><span class="badge">Lớp phó văn nghệ</span></td></tr>
+<tr><td>42</td><td>Võ Nguyễn Tường Vi</td><td></td></tr>
+<tr><td>43</td><td>Nguyễn Đoàn Trung Vũ</td><td></td></tr>
+<tr><td>44</td><td>Tống Thị Yên</td><td></td></tr>
 
-                        <p><b>${name}</b></p>
-                    </div>
-                `).join("")
-            );
-        </script>
+</tbody>
+</table>
 
-    </div>
 </div>
 
 </body>
 </html>
-
