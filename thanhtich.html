@@ -1,91 +1,220 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Thành tích – Lớp 12C2</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Thành tích – Lớp 12C2</title>
 
-    <style>
-        body { 
-            font-family: 'Poppins', Arial, sans-serif; 
-            margin: 0; 
-            background: #111;
-            color: #eee;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        h1, h2 {
-    font-weight: 600;
-    letter-spacing: 0.5px;
-        }
+<style>
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    background:#111;
+    color:#eee;
+}
 
-        p, li {
-    font-weight: 400;
-    line-height: 1.7;
-		}
+h1,h2{
+    font-weight:600;
+    letter-spacing:.5px;
+}
 
-        header {
-            background: #000;
-            padding: 25px 0;
-            text-align: center;
-            color: white;
-            box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-        }
+header{
+    background:#000;
+    padding:25px 0;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(255,255,255,0.05);
+}
 
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 15px;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: .25s;
-        }
-        nav a:hover {
-            background: #fff;
-            color: #000;
-        }
+nav a{
+    text-decoration:none;
+    color:#fff;
+    margin:0 12px;
+    padding:8px 16px;
+    border-radius:6px;
+    transition:.3s;
+    font-weight:500;
+}
 
-        .box {
-            width: 90%;
-            max-width: 1000px;
-            margin: 25px auto;
-            background: #1a1a1a;
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 4px 20px rgba(255,255,255,0.1);
-        }
+nav a:hover{
+    background:#fff;
+    color:#000;
+}
 
-        h2 { color: #fff; margin-top: 0; }
-        p { font-size: 17px; }
-    </style>
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 4px 25px rgba(255,255,255,0.06);
+}
+
+/* SEARCH BOX */
+.search-box{
+    margin:20px 0;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px 15px;
+    background:#111;
+    border:1px solid #333;
+    border-radius:8px;
+    color:#fff;
+    font-size:14px;
+    outline:none;
+    transition:.3s;
+}
+
+.search-box input:focus{
+    border-color:#fff;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+thead{
+    background:#222;
+}
+
+thead th{
+    padding:14px;
+    text-align:left;
+    border-bottom:2px solid #333;
+}
+
+tbody tr{
+    border-bottom:1px solid #222;
+    transition:.2s;
+}
+
+tbody tr:hover{
+    background:#1f1f1f;
+}
+
+td{
+    padding:14px;
+    font-size:14px;
+}
+
+/* MỤC TIÊU */
+.goal-box{
+    margin-top:40px;
+    background:#000;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    font-size:18px;
+    font-weight:500;
+    box-shadow:0 4px 20px rgba(255,255,255,0.08);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>THÀNH TÍCH LỚP 12C2</h1>
-    <nav>
-        <a href="index.html">Trang chủ</a>
-        <a href="thanhvien.html">Thành viên</a>
-        <a href="hoatdong.html">Hoạt động</a>
-        <a href="thanhtich.html">Thành tích</a>
-    </nav>
+<h1>THÀNH TÍCH LỚP 12C2</h1>
+<nav>
+<a href="index.html">Trang chủ</a>
+<a href="thanhvien.html">Thành viên</a>
+<a href="hoatdong.html">Hoạt động</a>
+<a href="thanhtich.html">Thành tích</a>
+</nav>
 </header>
 
-<div class="box">
-    <h2>Bảng giải thưởng</h2>
-    <p>Đang tổng hợp...</p>
+<div class="container">
+
+<h2>Bảng thành tích cá nhân</h2>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Tìm kiếm học sinh...">
 </div>
 
-<div class="box">
-    <h2>Thành tích cá nhân nổi bật</h2>
-    <p>Đang tổng hợp...</p>
+<table id="studentTable">
+<thead>
+<tr>
+<th style="width:40%;">Họ và tên</th>
+<th>Thành tích</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>Mai Phượng Thúy An</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Đặng Châu Anh</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Ngô Xuân Bảo</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Trần Gia Bảo</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Trần Ngọc Linh Chi</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Bích Diễm</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Đoàn Trí Dũng</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Trần Anh Dũng</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Lưu Quang Duy</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Võ Hoàng Duy</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Võ Văn Duy</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Ngô Lê Kiều Duyên</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Bế Tiến Đạt</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nông Tiến Đạt</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Đoàn Hà Bảo Đức</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Đinh Thiên Hoan</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Cù Huy Hoàng</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Tiến Khang</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Lê Đăng Khôi</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Phạm Đăng Khương</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Kiều Khởi Kiệt</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Đặng Gia Kiệt</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Dương Nữ Thiên Kim</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Khổng Sỹ Mạnh</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Trần Thế Mạnh</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Huỳnh Hoàng Châu My</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Phạm Anh Ý Nhật</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Ngô Nguyễn Uyển Nhi</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Phương Nhi</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Đinh Khánh Như</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Lê Gia Như</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Lương Thiên Phúc</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Minh Quân</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Thị Tú Quyên</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Lê Phạm Phát Thăng</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Lê Thị Nhã Thư</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Mạnh Tiến</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Lê Bảo Trân</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Trần Đặng Huyền Trân</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Hoàng Lê Băng Trúc</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Lưu Thị Thảo Vân</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Võ Nguyễn Tường Vi</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Nguyễn Đoàn Trung Vũ</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+<tr><td>Tống Thị Yên</td><td>Lớp 10: Học sinh Giỏi, Lớp 11: Học sinh Giỏi</td></tr>
+
+</tbody>
+</table>
+
+<div class="goal-box">
+🎯 Mục tiêu năm học: <br>
+<b>100% học sinh đỗ tốt nghiệp và đậu NV1</b>
 </div>
 
-<div class="box">
-    <h2>Mục tiêu năm học</h2>
-    <p><b>100% học sinh đỗ tốt nghiệp</b></p>
 </div>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const tableRows = document.querySelectorAll("#studentTable tbody tr");
+
+searchInput.addEventListener("keyup", function(){
+    const keyword = this.value.toLowerCase();
+
+    tableRows.forEach(row => {
+        const name = row.cells[0].textContent.toLowerCase();
+        row.style.display = name.includes(keyword) ? "" : "none";
+    });
+});
+</script>
 
 </body>
 </html>
-
